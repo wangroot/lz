@@ -1,0 +1,15 @@
+document.writeln("<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin-bottom:2px;\">");
+document.writeln("  <tr>");
+document.writeln("    <td width=\"290\"><a href=\"http:\/\/www.70e.com\/34834.html\" target=\"_blank\"><img src=\"style\/70e.gif\" width=\"324\" height=\"60\" border=\"0\" \/><\/a><\/td>");
+document.writeln("    <td align=\"center\"><a href=\"http:\/\/www.998lm.com\" target=\"_blank\"><img src=\"style\/998lm.gif\" width=\"324\" height=\"60\" border=\"0\" \/><\/a><\/td>");
+document.writeln("    <td width=\"290\" align=\"right\"><a href=\"http:\/\/u.haizhuan.org\/register\/?r=lmla_pic\" target=\"_blank\"><img src=\"style\/ruan.gif\" width=\"324\" height=\"60\" border=\"0\" \/><\/a><\/td>");
+document.writeln("  <\/tr>");
+document.writeln("  <tr>");
+document.writeln("    <td colspan=\"3\" height=\"4\"><\/td>");
+document.writeln("  <\/tr>");
+document.writeln("  <tr>");
+document.writeln("    <td width=\"290\"><a href=\"http:\/\/www.9523cc.com\/cclm\/\" target=\"_blank\"><img src=\"style\/cclm.gif\" width=\"324\" height=\"60\" border=\"0\" \/><\/a><\/td>");
+document.writeln("    <td align=\"center\"><a href=\"http:\/\/lm.lrswl.com\/\" target=\"_blank\"><img src=\"style\/lrs.gif\" width=\"324\" height=\"60\" border=\"0\" \/><\/a><\/td>");
+document.writeln("    <td width=\"290\" align=\"right\"><a href=\"http:\/\/www.zsj18.com\/#lmla\" target=\"_blank\"><img src=\"style\/zsj18.gif\" alt=\"要发广告联盟\" width=\"324\" height=\"60\" border=\"0\" \/><\/a><\/td>");
+document.writeln("  <\/tr>");
+document.writeln("<\/table>");
