@@ -60,17 +60,42 @@ class TeamController extends Controller {
 		echo $data;
     }
     public function page(){
-    	
+
+
     	$id = I('get.id');
     	$team = D('Home/Team');
     	$array = $team->getPage($id);
-
+    	if(IS_POST)
+    	{
+       		var_dump($_POST);die;
+    		
+    		if($team->create(I('post.'), 2))
+    		{
+    			if(FALSE !== $team->where(array('id' => array('eq', $id)))->save())  // save()的返回值是，如果失败返回false,如果成功返回受影响的条数【如果修改后和修改前相同就会返回0】
+    			{
+    				$this->success('评论成功', U('page'));
+    				exit;
+    			}
+    		}
+    		$error = $team->getError();
+    		$this->error($error);
+    	}
+    	
+    	
+    	$comments = D('Home/Comments');
+    	
+    	$com = $comments->getComments($id);
+    	
     	$this->assign(array(
     			'data' => $array,
+    			'id' => $id,
+    			'comments' => $com,
+    			
     	));
     	
     	$this->display();
     }
+    
     
     // 显示和处理表单
     public function edit()

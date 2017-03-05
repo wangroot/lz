@@ -292,3 +292,25 @@ h3,ul,li{margin:0;padding:0; list-style:none;}
 .footer .links a { color:#FFF;}
 .footer .cont {line-height:24px;padding:10px; text-align:center;}
 
+
+
+ .uls {
+  padding-left: 0;      
+  overflow: hidden;
+ }
+ .uls .star1,.star2,.star3,.star4,.star5 {
+  float: left;
+  list-style: none;
+  width: 27px;
+  height: 27px;
+  background: url(star.gif)
+ }
+ .uls .star1 a,.star2 a,.star3 a,.star4 a,.star5 a {
+  display: block;
+  width: 100%;
+  padding-top: 27px;
+  overflow: hidden;
+ }
+ .uls .star1.light,.star2.light,.star3.light,.star4.light,.star5.light {
+  background-position: 0 -29px;
+ }

@@ -4,7 +4,7 @@ use Think\Model;
 class TeamModel extends Model 
 {
 	protected $insertFields = array('name','contact','type','minimum_recharge','minimum_withdrawal','introduction','promote');
-	protected $updateFields = 'promote,id';
+	protected $updateFields = array('promote','id','star1','star2','star3','star4','star5','cname','csubject','ccontent');
 	
 	
 	// 添加前
@@ -48,6 +48,8 @@ class TeamModel extends Model
 		->select();
 		return $array;
 	}
+	
+	
 
 
 	

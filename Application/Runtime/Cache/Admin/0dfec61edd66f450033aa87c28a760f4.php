@@ -7,7 +7,7 @@
 <link href="/lz/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="background: #278296;color:white">
-<form method="post" action="/lz/index.php/Admin/Login/login">
+<form method="post" action="/lz/index.php/Admin/login/login">
     <table cellspacing="0" cellpadding="0" style="margin-top:100px" align="center">
         <tr>
             <td>

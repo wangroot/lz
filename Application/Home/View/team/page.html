@@ -305,7 +305,7 @@
 						<div class="mr"></div>
 						<div class="mm" style="width:98%">
 							<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-								<!--
+								<?php foreach ($comments as $k => $v): ?>
 								<tr>
 									<td>
 										<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:5px;margin-bottom:5px;margin-left:5px">
@@ -313,17 +313,19 @@
 												<td height="30" style="font-size:14px">
 													<strong>
 														<font color="#1B5791">
-															1.
+															<?php echo $v['id'] ?>
 														</font>
 													</strong>
 													<strong>
-														<font color="#1B5791">点评：GGY弹窗平台吧</font>
+														<font color="#1B5791"><?php echo $v['csubject'] ?></font>
 													</strong>
 												</td>
 											</tr>
+											<!-- 
 											<tr>
 												<td height="30" style="color:#333333"><strong>结帐及时性：5分 &nbsp;&nbsp;&nbsp;&nbsp;服务商信誉：5分&nbsp;&nbsp;&nbsp;&nbsp; 广告代码丰富：5分 &nbsp;&nbsp;&nbsp;&nbsp;客户服务质量：5分</strong></td>
 											</tr>
+											 -->
 											<tr>
 												<td height="36" style="overflow:auto;word-break:break-all;padding-left:10px;">一直在这家投放弹窗，效果很不错！很信誉的平台吧！</td>
 											</tr>
@@ -331,28 +333,7 @@
 												<td height="30" style="border-bottom: 1px solid #999999;">
 													<table width="100%" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td style="color:#333333"><strong>作者：匿名 &nbsp;&nbsp;&nbsp;时间：2017/2/22 10:49:23 &nbsp;&nbsp;&nbsp;地区：广东肇庆</strong></td>
-															<td align="right"><a href="#replay"><strong>我也来点评</strong></a></td>
-														</tr>
-													</table>
-												</td>
-											</tr>
-											<tr>
-												<td height="30" style="font-size:14px"><strong><font color="#1B5791">
-												52.
-												</font></strong><strong><font color="#1B5791">点评：GGY弹窗平台吧</font></strong></td>
-											</tr>
-											<tr>
-												<td height="30" style="color:#333333"><strong>结帐及时性：5分 &nbsp;&nbsp;&nbsp;&nbsp;服务商信誉：5分&nbsp;&nbsp;&nbsp;&nbsp; 广告代码丰富：5分 &nbsp;&nbsp;&nbsp;&nbsp;客户服务质量：5分</strong></td>
-											</tr>
-											<tr>
-												<td height="36" style="overflow:auto;word-break:break-all;padding-left:10px;">好的广告平台吧，信誉好，我们站长是大力支持的。<br>平台吧信誉还不错收到钱了&#44;就是广告还要多加一点就好了.</td>
-											</tr>
-											<tr>
-												<td height="30" style="border-bottom: 1px solid #999999;">
-													<table width="100%" border="0" cellspacing="0" cellpadding="0">
-														<tr>
-															<td style="color:#333333"><strong>作者：匿名 &nbsp;&nbsp;&nbsp;时间：2016/7/8 16:39:06 &nbsp;&nbsp;&nbsp;地区：广东东莞</strong></td>
+															<td style="color:#333333"><strong>作者：<?php echo $v['cname'] ?> &nbsp;&nbsp;&nbsp;</strong></td>
 															<td align="right"><a href="#replay"><strong>我也来点评</strong></a></td>
 														</tr>
 													</table>
@@ -361,8 +342,8 @@
 										</table>
 									</td>
 								</tr>
-								
-								-->
+								<?php endforeach; ?>
+							
 								<tr>
 									<td height="26" align="center">
 										&nbsp;页码:
@@ -392,7 +373,7 @@
 						<div class="ml"></div>
 						<div class="mr"></div>
 						<div class="mm" style="width:98%">
-							<form action="#" name="demo" id="demo" method="post">
+							<form action="<?php echo U('Comments/page'); ?>" name="demo" id="demo" method="post">
 								<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="commenttable">
 									<tr>
 										<td height="60"><strong>评分：</strong></td>
@@ -402,29 +383,30 @@
 													<td width="280">
 														<div class="shop-rating">
 															<span class="title">信誉度：</span>
-															<ul class="rating-level" id="stars1">
-																<li><a class="one-star" star:value="1" href="#">1</a></li>
-																<li><a class="two-stars" star:value="2" href="#">2</a></li>
-																<li><a class="three-stars" star:value="3" href="#">3</a></li>
-																<li><a class="four-stars" star:value="4" href="#">4</a></li>
-																<li><a class="five-stars" star:value="5" href="#">5</a></li>
-															</ul>
+															 <ul class="uls">
+															  <li class="star1" name="star1" value=""><input type="hidden" id = "a" name="star1" value="" /><a href="javascript:;">1</a></li>
+															  <li class="star1" name="star1" value=""><input type="hidden" name="star1" value="" /><a href="javascript:;">2</a></li>
+															  <li class="star1" name="star1" value=""><input type="hidden" name="star1" value="" /><a href="javascript:;">3</a></li>
+															  <li class="star1" name="star1" value=""><input type="hidden" name="star1" value="" /><a href="javascript:;">4</a></li>
+															  <li class="star1" name="star1" value=""><input type="hidden" name="star1" value="" /><a href="javascript:;">5</a></li>
+															 </ul>
 															<span class="result" id="stars1-tips"></span>
-															<input type="hidden" id="stars1-input" name="p1" value="" size="2" />
+															<div id = "b"></div>
+															<input type="hidden" id="stars1-input" name="star1" value="" size="2" />
 														</div>
 													</td>
 													<td width="280">
 														<div class="shop-rating">
 															<span class="title">提款速度：</span>
-															<ul class="rating-level" id="stars2">
-																<li><a class="one-star" star:value="1" href="#">1</a></li>
-																<li><a class="two-stars" star:value="2" href="#">2</a></li>
-																<li><a class="three-stars" star:value="3" href="#">3</a></li>
-																<li><a class="four-stars" star:value="4" href="#">4</a></li>
-																<li><a class="five-stars" star:value="5" href="#">5</a></li>
-															</ul>
+															 <ul class="uls">
+															  <li class="star2" name="star2" value=""><a href="javascript:;">1</a></li>
+															  <li class="star2" name="star2" value=""><a href="javascript:;">2</a></li>
+															  <li class="star2" name="star2" value=""><a href="javascript:;">3</a></li>
+															  <li class="star2" name="star2" value=""><a href="javascript:;">4</a></li>
+															  <li class="star2" name="star2" value=""><a href="javascript:;">5</a></li>
+															  </ul>
 															<span class="result" id="stars2-tips"></span>
-															<input type="hidden" id="stars2-input" name="p2" value="" size="2" />
+															<input type="hidden" id="stars2-input" name="star2" value="" size="2" />
 														</div>
 													</td>
 												</tr>
@@ -432,29 +414,29 @@
 													<td width="280">
 														<div class="shop-rating">
 															<span class="title">彩种丰富度：</span>
-															<ul class="rating-level" id="stars3">
-																<li><a class="one-star" star:value="1" href="#">1</a></li>
-																<li><a class="two-stars" star:value="2" href="#">2</a></li>
-																<li><a class="three-stars" star:value="3" href="#">3</a></li>
-																<li><a class="four-stars" star:value="4" href="#">4</a></li>
-																<li><a class="five-stars" star:value="5" href="#">5</a></li>
-															</ul>
+															 <ul class="uls">
+															  <li class="star3" name="star3" value=""><a href="javascript:;">1</a></li>
+															  <li class="star3" name="star3" value=""><a href="javascript:;">2</a></li>
+															  <li class="star3" name="star3" value=""><a href="javascript:;">3</a></li>
+															  <li class="star3" name="star3" value=""><a href="javascript:;">4</a></li>
+															  <li class="star3" name="star3" value=""><a href="javascript:;">5</a></li>
+															 </ul>
 															<span class="result" id="stars3-tips"></span>
-															<input type="hidden" id="stars3-input" name="p3" value="" size="2" />
+															<input type="hidden" id="stars3-input" name="star3" value="" size="2" />
 														</div>
 													</td>
 													<td width="280">
 														<div class="shop-rating">
 															<span class="title">玩法丰富度：</span>
-															<ul class="rating-level" id="stars4">
-																<li><a class="one-star" star:value="1" href="#">1</a></li>
-																<li><a class="two-stars" star:value="2" href="#">2</a></li>
-																<li><a class="three-stars" star:value="3" href="#">3</a></li>
-																<li><a class="four-stars" star:value="4" href="#">4</a></li>
-																<li><a class="five-stars" star:value="5" href="#">5</a></li>
-															</ul>
+															 <ul class="uls">
+															  <li class="star4" name="star4" value=""><a href="javascript:;">1</a></li>
+															  <li class="star4" name="star4" value=""><a href="javascript:;">2</a></li>
+															  <li class="star4" name="star4" value=""><a href="javascript:;">3</a></li>
+															  <li class="star4" name="star4" value=""><a href="javascript:;">4</a></li>
+															  <li class="star4" name="star4" value=""><a href="javascript:;">5</a></li>
+															 </ul>
 															<span class="result" id="stars4-tips"></span>
-															<input type="hidden" id="stars4-input" name="p4" value="" size="2" />
+															<input type="hidden" id="stars4-input" name="star4" value="" size="2" />
 														</div>
 													</td>
 												</tr>
@@ -462,15 +444,15 @@
 													<td width="280">
 														<div class="shop-rating">
 															<span class="title">客服服务质量：</span>
-															<ul class="rating-level" id="stars3">
-																<li><a class="one-star" star:value="1" href="#">1</a></li>
-																<li><a class="two-stars" star:value="2" href="#">2</a></li>
-																<li><a class="three-stars" star:value="3" href="#">3</a></li>
-																<li><a class="four-stars" star:value="4" href="#">4</a></li>
-																<li><a class="five-stars" star:value="5" href="#">5</a></li>
-															</ul>
-															<span class="result" id="stars3-tips"></span>
-															<input type="hidden" id="stars3-input" name="p3" value="" size="2" />
+															 <ul class="uls">
+															  <li class="star5" name="star5" value=""><a href="javascript:;">1</a></li>
+															  <li class="star5" name="star5" value=""><a href="javascript:;">2</a></li>
+															  <li class="star5" name="star5" value=""><a href="javascript:;">3</a></li>
+															  <li class="star5" name="star5" value=""><a href="javascript:;">4</a></li>
+															  <li class="star5" name="star5" value=""><a href="javascript:;">5</a></li>
+															 </ul>
+															<span class="result" id="stars5-tips"></span>
+															<input type="hidden" id="stars5-input" name="star5" value="" size="2" />
 														</div>
 													</td>
 												</tr>
@@ -494,9 +476,9 @@
 									</tr>
 									<tr>
 										<td height="24">
-											<input name="belong" type="hidden" id="belong" value="253" />
+											<input name="tid" type="hidden" id="belong" value="<?php echo $id; ?>" />
 										</td>
-										<td width="11%"><input type="submit" name="button" id="button" value=" 提交 "/></td>
+										<td width="11%"><input type="submit" id="button" value=" 提交 "/></td>
 										<td width="81%"><font color="#333333">* 恶意评论和灌水经本站查明后管理员会将其删除，请网友注意评论者IP，以防被骗。</font></td>
 									</tr>
 								</table>
@@ -576,92 +558,159 @@
 </div>
 </div>
 </div>
-<script type="text/javascript">
-var Class = {
-	create: function() {
-		return function() { this.initialize.apply(this, arguments); }
-	}
+<script>
+function getElementsByClassName(clsName, tagName) {  
+    var ClassElements = [];  
+    selElements = document.getElementsByTagName(tagName);  
+   
+    for (var i = 0; i < selElements.length; i++) {  
+        if (selElements[i].className == clsName) {  
+            ClassElements[ClassElements.length] = selElements[i];  
+        }  
+    }  
+    return ClassElements;  
 }
-var Extend = function(destination, source) {
-	for (var property in source) {
-		destination[property] = source[property];
-	}
-}
-function stopDefault( e ) {
-	 if ( e && e.preventDefault ){
-		e.preventDefault();
-	}else{
-		window.event.returnValue = false;
-	}
-	return false;
-} 
-/**
- * 星星打分组件
- *
- * @author	Yunsd
- * @date		2010-7-5
- */
-var Stars = Class.create();
-Stars.prototype = {
-	initialize: function(star,options) {
-		this.SetOptions(options); //默认属性
-		var flag = 999; //定义全局指针
-		var isIE = (document.all) ? true : false; //IE?
-		var starlist = document.getElementById(star).getElementsByTagName('a'); //星星列表
-		var input = document.getElementById(this.options.Input) || document.getElementById(star+"-input"); // 输出结果
-		var tips = document.getElementById(this.options.Tips) || document.getElementById(star+"-tips"); // 打印提示
-		var nowClass = " " + this.options.nowClass; // 定义选中星星样式名
-		var tipsTxt = this.options.tipsTxt; // 定义提示文案
-		var len = starlist.length; //星星数量
-		
+var num1=finalnum1 = tempnum1= 0;
+var num2=finalnum2 = tempnum2= 0;
+var num3=finalnum3 = tempnum3= 0;
+var num4=finalnum4 = tempnum4= 0;
+var num5=finalnum5 = tempnum5= 0;
+var lis1 = this.getElementsByClassName("star1","li");
+var lis2 = this.getElementsByClassName("star2","li");
+var lis3 = this.getElementsByClassName("star3","li");
+var lis4 = this.getElementsByClassName("star4","li");
+var lis5 = this.getElementsByClassName("star5","li");
 
-		for(i=0;i<len;i++){ // 绑定事件 点击 鼠标滑过
-			starlist[i].value = i;
-			starlist[i].onclick = function(e){
-				stopDefault(e);
-				this.className = this.className + nowClass;
-				flag = this.value;
-				input.value = this.getAttribute("star:value");
-				tips.innerHTML = tipsTxt[this.value]
-			}
-			starlist[i].onmouseover = function(){
-				if (flag< 999){
-					var reg = RegExp(nowClass,"g");
-					starlist[flag].className = starlist[flag].className.replace(reg,"")
-				}
-			}
-			starlist[i].onmouseout = function(){
-				if (flag< 999){
-					starlist[flag].className = starlist[flag].className + nowClass;
-				}
-			}
-		};
-		if (isIE){ //FIX IE下样式错误
-			var li = document.getElementById(star).getElementsByTagName('li');
-			for (var i = 0, len = li.length; i < len; i++) {
-				var c = li[i];
-				if (c) {
-					c.className = c.getElementsByTagName('a')[0].className;
-				}
-			}
-		}
-	},
-	//设置默认属性
-	SetOptions: function(options) {
-		this.options = {//默认值
-			Input:			"",//设置触保存分数的INPUT
-			Tips:			"",//设置提示文案容器
-			nowClass:	"current-rating",//选中的样式名
-			tipsTxt:		["1分-很差","2分-差","3分-一般","4分-好","5分-很好"]//提示文案
-		};
-		Extend(this.options, options || {});
-	}
+//num:传入点亮星星的个数
+//finalnum:最终点亮星星的个数
+//tempnum:一个中间值
+
+function fnShow1(num1) {
+	 finalnum1= num1 || tempnum1;//如果传入的num为0，则finalnum取tempnum的值
+	 for (var i = 0; i < lis1.length; i++) {
+	  lis1[i].className = i < finalnum1? "light star1" : "star1";//点亮星星就是加class为light的样式
+	 }
 }
 
-var Stars1 = new Stars("stars1")
-var Stars2 = new Stars("stars2")
-var Stars3 = new Stars("stars3")
-var Stars4 = new Stars("stars4")
+function fnShow2(num2) {
+	 finalnum2= num2 || tempnum2;//如果传入的num为0，则finalnum取tempnum的值
+	 for (var i = 0; i < lis2.length; i++) {
+		  lis2[i].className = i < finalnum2? "light star2" : "star2";//点亮星星就是加class为light的样式
+	 }
+}
+
+
+function fnShow3(num3) {
+	 finalnum3= num3 || tempnum3;//如果传入的num为0，则finalnum取tempnum的值
+	 for (var i = 0; i < lis3.length; i++) {
+		  lis3[i].className = i < finalnum3? "light star3" : "star3";//点亮星星就是加class为light的样式
+	 }
+}
+
+
+function fnShow4(num4) {
+	 finalnum4= num4 || tempnum4;//如果传入的num为0，则finalnum取tempnum的值
+	 for (var i = 0; i < lis4.length; i++) {
+		  lis4[i].className = i < finalnum4? "light star4" : "star4";//点亮星星就是加class为light的样式
+	 }
+}
+
+
+function fnShow5(num5) {
+	 finalnum5= num5 || tempnum5;//如果传入的num为0，则finalnum取tempnum的值
+	 for (var i = 0; i < lis5.length; i++) {
+		  lis5[i].className = i < finalnum5? "light star5" : "star5";//点亮星星就是加class为light的样式
+	 }
+}
+
+
+
+
+for (var i = 1; i <= lis1.length; i++) {
+	 lis1[i - 1].index = i;
+	 lis1[i - 1].onmouseover = function() { //鼠标经过点亮星星。
+	  	fnShow1(this.index);//传入的值为正，就是finalnum
+	 }
+	 lis1[i - 1].onmouseout = function() { //鼠标离开时星星变暗
+	  	fnShow1(0);//传入值为0，finalnum为tempnum,初始为0
+	 }
+	 lis1[i - 1].onclick = function() { //鼠标点击,同时会调用onmouseout,改变tempnum值点亮星星
+	 	 tempnum1= this.index;
+	 	//var nvalue = document.getElementById("stars3-input")
+	 	//nvalue.value="somethind"; 
+	 	document.getElementById("stars1-input").setAttribute("value",tempnum1);
+	 	//console.log(nvalue.value);
+	 	//this.getElementsByClassName("star1","input").value = this.index;
+	 }
+}
+
+for (var i = 1; i <= lis2.length; i++) {
+	 lis2[i - 1].index = i;
+	 lis2[i - 1].onmouseover = function() { //鼠标经过点亮星星。
+	  	fnShow2(this.index);//传入的值为正，就是finalnum
+	 }
+	 lis2[i - 1].onmouseout = function() { //鼠标离开时星星变暗
+	  	fnShow2(0);//传入值为0，finalnum为tempnum,初始为0
+	 }
+	 lis2[i - 1].onclick = function() { //鼠标点击,同时会调用onmouseout,改变tempnum值点亮星星
+	 	 tempnum2= this.index;
+	 	document.getElementById("stars2-input").setAttribute("value",tempnum2);
+	 }
+}
+
+for (var i = 1; i <= lis3.length; i++) {
+	 lis3[i - 1].index = i;
+	 lis3[i - 1].onmouseover = function() { //鼠标经过点亮星星。
+	  	fnShow3(this.index);//传入的值为正，就是finalnum
+	 }
+	 lis3[i - 1].onmouseout = function() { //鼠标离开时星星变暗
+	  	fnShow3(0);//传入值为0，finalnum为tempnum,初始为0
+	 }
+	 lis3[i - 1].onclick = function() { //鼠标点击,同时会调用onmouseout,改变tempnum值点亮星星
+	 	 tempnum3= this.index;
+	 	document.getElementById("stars3-input").setAttribute("value",tempnum3);
+	 }
+}
+
+for (var i = 1; i <= lis4.length; i++) {
+	 lis4[i - 1].index = i;
+	 lis4[i - 1].onmouseover = function() { //鼠标经过点亮星星。
+	  	fnShow4(this.index);//传入的值为正，就是finalnum
+	 }
+	 lis4[i - 1].onmouseout = function() { //鼠标离开时星星变暗
+	  	fnShow4(0);//传入值为0，finalnum为tempnum,初始为0
+	 }
+	 lis4[i - 1].onclick = function() { //鼠标点击,同时会调用onmouseout,改变tempnum值点亮星星
+	 	 tempnum4= this.index;
+	 	document.getElementById("stars4-input").setAttribute("value",tempnum4);
+	 }
+}
+
+for (var i = 1; i <= lis5.length; i++) {
+	 lis5[i - 1].index = i;
+	 lis5[i - 1].onmouseover = function() { //鼠标经过点亮星星。
+	  	fnShow5(this.index);//传入的值为正，就是finalnum
+	 }
+	 lis5[i - 1].onmouseout = function() { //鼠标离开时星星变暗
+	  	fnShow5(0);//传入值为0，finalnum为tempnum,初始为0
+	 }
+	 lis5[i - 1].onclick = function() { //鼠标点击,同时会调用onmouseout,改变tempnum值点亮星星
+	 	 tempnum5= this.index;
+	 	document.getElementById("stars5-input").setAttribute("value",tempnum5);
+	 }
+}
+
+
+
+
+
+
+
+
+</script>
+<script>
+document.getElementById("b").innerHTML="<input type="hidden" name="ttttt" value="hdfhd" />";
+
 </script>
 <script>
 document.body.oncopy = function () { setTimeout( function () { var text = clipboardData.getData("text"); if (text) { text = text + "\r\n点评来自：平台吧啦 "+location.href; clipboardData.setData("text", text); } }, 100 ) }
