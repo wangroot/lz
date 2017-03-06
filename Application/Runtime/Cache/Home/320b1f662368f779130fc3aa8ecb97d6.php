@@ -47,7 +47,7 @@ $(document).ready(function(){
 			<a href="http://app.feima5.com/" target="_blank"><font color="#0000E3">广告租位</font></a> 
 		</div>
 <div class="div2">
-	<div class="divr">选择平台/团队前请到平台吧先看看平台/团队的评测，谨防上当。如果没有您关注的平台/团队，请点这里 <strong><a style="color:#FEF600" href="add.html">---&gt;&gt;添加</a></strong></div>
+	<div class="divr">选择平台/团队前请到平台吧先看看平台/团队的评测，谨防上当。如果没有您关注的平台/团队，请点这里 <strong><a style="color:#FEF600" href="<?php echo U('Team/adds'); ?>">---&gt;&gt;添加</a></strong></div>
 	<div><h1 class="ih1"><a href="<?php echo U('Index/index'); ?>">中国首家平台/团队公开评价网</a></h1></div>
 </div>
 <table style="margin-bottom:2px;" width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -232,8 +232,8 @@ $(document).ready(function(){
 		<tr>
 				<td>
 					<ul class="ul2 dot2">
-						<li><span class="s3">2-24</span><span class="s1">1</span><span class="s2"><a href="#">优视广告传媒</a></span></li>
-						<li><span class="s3">2-17</span><span class="s1">2</span><span class="s2"><a href="#">U8广告平台吧</a></span></li>
+						<li><span class="s3">2-24</span><span class="s1">1</span><span class="s2"><a href="#">##</a></span></li>
+						<li><span class="s3">2-17</span><span class="s1">2</span><span class="s2"><a href="#">##</a></span></li>
 					</ul>
 				</td>
 			</tr>
@@ -258,8 +258,8 @@ $(document).ready(function(){
 
 <td>
 	<ul class="ul2 dot2">
-		<li><span class="s3">5</span><span class="s1">1</span><span class="s2"><a href="#">桔子广告平台吧</a></span></li>
-		<li><span class="s3">5</span><span class="s1">2</span><span class="s2"><a href="#">大众广告平台吧</a></span></li>
+		<li><span class="s3">5</span><span class="s1">1</span><span class="s2"><a href="#">##</a></span></li>
+		<li><span class="s3">5</span><span class="s1">2</span><span class="s2"><a href="#">##</a></span></li>
 	</ul>
 </tr>
 </tbody></table></div>
@@ -280,8 +280,8 @@ $(document).ready(function(){
 
 <td>
 	<ul class="ul2 dot2">
-		<li><span class="s3">5</span><span class="s1">1</span><span class="s2"><a href="#">桔子广告平台吧</a></span></li>
-		<li><span class="s3">5</span><span class="s1">2</span><span class="s2"><a href="#">大众广告平台吧</a></span></li>
+		<li><span class="s3">5</span><span class="s1">1</span><span class="s2"><a href="#">##</a></span></li>
+		<li><span class="s3">5</span><span class="s1">2</span><span class="s2"><a href="#">##</a></span></li>
 	</ul>
 </tr>
 </tbody></table></div>
@@ -301,8 +301,8 @@ $(document).ready(function(){
 <tbody><tr>
 <td>
 	<ul class="ul2 dot2">
-		<li><span class="s3">5</span><span class="s1">1</span><span class="s2"><a href="#">桔子广告平台吧</a></span></li>
-		<li><span class="s3">5</span><span class="s1">2</span><span class="s2"><a href="#">大众广告平台吧</a></span></li>
+		<li><span class="s3">5</span><span class="s1">1</span><span class="s2"><a href="#">##</a></span></li>
+		<li><span class="s3">5</span><span class="s1">2</span><span class="s2"><a href="#">##</a></span></li>
 	</ul>
 </tr>
 </tbody></table></div>
@@ -322,8 +322,8 @@ $(document).ready(function(){
 <tbody><tr>
 <td>
 	<ul class="ul2 dot2">
-		<li><span class="s3">649</span><span class="s1">1</span><span class="s2"><a href="#">桔子广告平台吧</a></span></li>
-		<li><span class="s3">413</span><span class="s1">2</span><span class="s2"><a href="#">八九广告平台吧</a></span></li>
+		<li><span class="s3">649</span><span class="s1">1</span><span class="s2"><a href="#">##</a></span></li>
+		<li><span class="s3">413</span><span class="s1">2</span><span class="s2"><a href="#">##</a></span></li>
 	</ul>
 </tr>
 </tbody></table></div>

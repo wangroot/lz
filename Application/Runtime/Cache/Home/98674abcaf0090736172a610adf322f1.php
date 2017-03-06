@@ -46,7 +46,7 @@
 			<div class="divr">
 				选择平台/团队前请到平台吧先看看平台/团队的评测，谨防上当。如果没有您关注的平台/团队，请点这里
 			    <strong>
-			    	<a style="color:#FEF600" href="<?php echo U('Team/add'); ?>">---&gt;&gt;添加</a>
+			    	<a style="color:#FEF600" href="<?php echo U('Team/adds'); ?>">---&gt;&gt;添加</a>
 			    </strong>
 			 </div>
 			<div><h1 class="ih1"><a href="<?php echo U('Index/index'); ?>">中国首家平台/团队公开评价网</a></h1></div>
@@ -148,7 +148,7 @@
 										</tr>
 									</table>
 								</td>
-								<td class="px14"><a href="<?php echo U('Team/search'); ?>">高级搜索</a> <a href="<?php echo U('Team/add'); ?>">提交平台/团队</a></td>
+								<td class="px14"><a href="<?php echo U('Team/search'); ?>">高级搜索</a> <a href="<?php echo U('Team/adds'); ?>">提交平台/团队</a></td>
 							</tr>
 						</table>
 					</form>
@@ -220,60 +220,60 @@
 												<td width="50" height="150" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;border-left: 1px solid #a5b5c0;">
 													<table width="28" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td align="center">5.00</td>
+															<td align="center"><?php echo $star[star1]; ?></td>
 														</tr>
 														<tr>
-															<td height="144.9" bgcolor="#FF0000">&nbsp;</td>
-														</tr>
-													</table>
-												</td>
-												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
-													<table width="28" border="0" cellspacing="0" cellpadding="0">
-														<tr>
-															<td align="center">5.00</td>
-														</tr>
-														<tr>
-															<td height="144.9" bgcolor="#999900">&nbsp;</td>
+															<td height="<?php echo $star[s1]; ?>" bgcolor="#FF0000">&nbsp;</td>
 														</tr>
 													</table>
 												</td>
 												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
 													<table width="28" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td align="center">5.00</td>
+															<td align="center"><?php echo $star['star2']; ?></td>
 														</tr>
 														<tr>
-															<td height="145.8" bgcolor="#660099">&nbsp;</td>
-														</tr>
-													</table>
-												</td>
-												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
-													<table width="28" border="0" cellspacing="0" cellpadding="0">
-														<tr>
-															<td align="center">5.00</td>
-														</tr>
-														<tr>
-															<td height="145.5" bgcolor="#333333">&nbsp;</td>
+															<td height="<?php echo $star['s2']; ?>" bgcolor="#999900">&nbsp;</td>
 														</tr>
 													</table>
 												</td>
 												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
 													<table width="28" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td align="center">5.00</td>
+															<td align="center"><?php echo $star['star3']; ?></td>
 														</tr>
 														<tr>
-															<td height="145.2" bgcolor="#666666">&nbsp;</td>
+															<td height="<?php echo $star['s3']; ?>" bgcolor="#660099">&nbsp;</td>
 														</tr>
 													</table>
 												</td>
 												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
 													<table width="28" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td align="center">5.00</td>
+															<td align="center"><?php echo $star['star4']; ?></td>
 														</tr>
 														<tr>
-															<td height="145.2" bgcolor="#674444">&nbsp;</td>
+															<td height="<?php echo $star['s4']; ?>" bgcolor="#333333">&nbsp;</td>
+														</tr>
+													</table>
+												</td>
+												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
+													<table width="28" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td align="center"><?php echo $star['star5']; ?></td>
+														</tr>
+														<tr>
+															<td height="<?php echo $star['s5']; ?>" bgcolor="#666666">&nbsp;</td>
+														</tr>
+													</table>
+												</td>
+												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
+													<table width="28" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td align="center"><?php echo $star['total']; ?></td>
+														</tr>
+														<tr>
+															<td height="<?php echo $star['s6']; ?>" bgcolor="#674444">&nbsp;</td>
 														</tr>
 													</table>
 												</td>
@@ -313,7 +313,7 @@
 												<td height="30" style="font-size:14px">
 													<strong>
 														<font color="#1B5791">
-															<?php echo $v['id'] ?>
+															<?php echo $k+1 ?>
 														</font>
 													</strong>
 													<strong>
@@ -327,14 +327,14 @@
 											</tr>
 											 -->
 											<tr>
-												<td height="36" style="overflow:auto;word-break:break-all;padding-left:10px;">一直在这家投放弹窗，效果很不错！很信誉的平台吧！</td>
+												<td height="36" style="overflow:auto;word-break:break-all;padding-left:10px;"><?php echo $v['ccontent'] ?></td>
 											</tr>
 											<tr>
 												<td height="30" style="border-bottom: 1px solid #999999;">
 													<table width="100%" border="0" cellspacing="0" cellpadding="0">
 														<tr>
 															<td style="color:#333333"><strong>作者：<?php echo $v['cname'] ?> &nbsp;&nbsp;&nbsp;</strong></td>
-															<td align="right"><a href="#replay"><strong>我也来点评</strong></a></td>
+															<td align="right"><a href="<?php echo U('Team/page',array('id'=>$v['tid'])); ?>"><strong>我也来点评</strong></a></td>
 														</tr>
 													</table>
 												</td>
@@ -373,7 +373,7 @@
 						<div class="ml"></div>
 						<div class="mr"></div>
 						<div class="mm" style="width:98%">
-							<form action="<?php echo U('Comments/page'); ?>" name="demo" id="demo" method="post">
+							<form action="<?php echo U('Team/page'); ?>" name="demo" id="demo" method="post">
 								<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="commenttable">
 									<tr>
 										<td height="60"><strong>评分：</strong></td>
@@ -728,5 +728,6 @@ document.body.oncopy = function () { setTimeout( function () { var text = clipbo
 <script type="text/javascript">
 	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
 </script>
+
 </body>
 </html>

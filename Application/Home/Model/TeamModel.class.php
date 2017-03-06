@@ -37,10 +37,33 @@ class TeamModel extends Model
 	function getPromote(){
 		$array = $this->where(array(
 				'promote' => array('EQ', '1'),
-		))
-		->select();
+		))->select();
+		
 		return $array;
 	}
+	function getCtatol($id){
+		
+		$team = D('Home/Team');
+		$array = $this->alias('a')
+					  ->join('LEFT JOIN __COMMENTS__ b ON a.id=b.tid')
+ 					  ->where(array(
+ 						'a.promote' => array('EQ', '1'),
+ 					  	'a.id' => array('EQ', $id),
+ 						))->count();
+		return $array;
+	}
+	
+	function getPData(){
+		$array = $this->getPromote();
+		foreach ($array as $k => &$v){
+			$v['ctotal'] = $this->getCtatol($v['id']);
+		}
+		return $array;
+	}
+	
+
+	
+	
 	function getPage($id){
 		$array = $this->where(array(
 				'id' => array('EQ', $id),
@@ -50,12 +73,5 @@ class TeamModel extends Model
 	}
 	
 	
-
-
-	
-	function getData(){
-
-		
-	}
 	/************************************ 其他方法 ********************************************/
 }

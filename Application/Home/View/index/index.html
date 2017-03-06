@@ -56,7 +56,7 @@
 			<div class="divr">
 				选择平台/团队前请到平台吧先看看平台/团队的评测，谨防上当。如果没有您关注的平台/团队，请点这里
 			    <strong>
-			    	<a style="color:#FEF600" href="<?php echo U('Team/add'); ?>">---&gt;&gt;添加</a>
+			    	<a style="color:#FEF600" href="<?php echo U('Team/adds'); ?>">---&gt;&gt;添加</a>
 			    </strong>
 			 </div>
 			<div><h1 class="ih1"><a href="<?php echo U('Index/index'); ?>">中国首家平台/团队公开评价网</a></h1></div>
@@ -162,7 +162,7 @@
 										</td>
 										<td class="px14">
 											<a href="<?php echo U('Team/search'); ?>">高级搜索</a> 
-											<a href="<?php echo U('Team/add'); ?>">提交平台/团队</a>
+											<a href="<?php echo U('Team/adds'); ?>">提交平台/团队</a>
 										</td>
 									</tr>
 								</tbody>
@@ -237,14 +237,14 @@
 			 <?php foreach ($data as $k => $v): ?>
 		<div id="ilist">
 		<div>
-		<div class="r">0</div>
+		<div class="r"><?php echo $v['ctotal']; ?></div>
 		<div>
 			<span class="num" style="margin-right:50px;">
 				<?php echo $v['id']; ?>
 			</span>
 			<span class="title" style="margin-left:0px;">
 				<h2>
-					<a href="<?php echo U('Team/page',array('id'=>$v['id'])); ?>" target="_blank">
+					<a href="<?php echo U('Team/page',array('id'=>$v['id'])); ?>" target="">
 						<?php echo $v['name']; ?>
 					</a>
 				</h2>
@@ -455,6 +455,25 @@
 
 		<script type="text/javascript">
 			document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+		</script>
+		
+		<script>
+		$(document).ready(function () {
+			
+            $.ajax({
+            	type:"get",
+                async:false,
+                url:"<?php echo U('Home/Team/getAjax'); ?>",
+               // data: {type: newdata},
+                dataType:"json",
+                success: function (data) {
+
+
+                }
+                
+            });
+		});
+		
 		</script>
 
 	</div>

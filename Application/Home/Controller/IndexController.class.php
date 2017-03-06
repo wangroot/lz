@@ -4,10 +4,12 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
     	$team = D('Home/Team');
-    	$array = $team->getPromote();
+    	$array = $team->getPData();
+    	
     	
     	$this->assign(array(
     			'data' => $array,
+
     	));	
     	$this->display();
     }
