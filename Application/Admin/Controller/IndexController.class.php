@@ -30,6 +30,10 @@ class IndexController extends BaseController
      		{
      			if(FALSE !== $team->where(array('id' => array('eq', $_POST['id'])))->save())  // save()的返回值是，如果失败返回false,如果成功返回受影响的条数【如果修改后和修改前相同就会返回0】
      			{
+     				$cnum = D('Home/Cnum');
+     				$cnumss['cnums'] = '0';
+     				$cnumss['tids'] = $_POST['id'];
+     				$cnum->add($cnumss);
      				$this->success('操作成功！', U('main'));
      				exit;
      			}

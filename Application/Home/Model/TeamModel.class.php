@@ -3,8 +3,8 @@ namespace Home\Model;
 use Think\Model;
 class TeamModel extends Model 
 {
-	protected $insertFields = array('name','contact','type','minimum_recharge','minimum_withdrawal','introduction','promote');
-	protected $updateFields = array('promote','id','star1','star2','star3','star4','star5','cname','csubject','ccontent');
+	protected $insertFields = array('name','contact','type','minimum_recharge','minimum_withdrawal','introduction','promote','cnum');
+	protected $updateFields = array('promote','id','star1','star2','star3','star4','star5','cname','csubject','ccontent','cnum');
 	
 	
 	// 添加前
@@ -34,31 +34,44 @@ class TeamModel extends Model
 		->select();
 		return $array;
 	}
-	function getPromote(){
-		$array = $this->where(array(
-				'promote' => array('EQ', '1'),
-		))->select();
-		
-		return $array;
-	}
-	function getCtatol($id){
-		
-		$team = D('Home/Team');
-		$array = $this->alias('a')
-					  ->join('LEFT JOIN __COMMENTS__ b ON a.id=b.tid')
- 					  ->where(array(
- 						'a.promote' => array('EQ', '1'),
- 					  	'a.id' => array('EQ', $id),
- 						))->count();
-		return $array;
-	}
+
+
 	
-	function getPData(){
-		$array = $this->getPromote();
-		foreach ($array as $k => &$v){
-			$v['ctotal'] = $this->getCtatol($v['id']);
+	function getPData($perPage){
+		
+		/*************** 翻页 ****************/
+		// 取出总的记录数
+		$count = $this->where(array('promote' => array('EQ', '1'),))->count();
+		// 生成翻页类的对象
+		$pageObj = new \Think\Page($count, $perPage);
+		// 设置样式
+		$pageObj->lastSuffix=false;
+		$pageObj->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
+		$pageObj->setConfig('prev','上一页');
+		$pageObj->setConfig('next','下一页');
+		$pageObj->setConfig('last','末页');
+		$pageObj->setConfig('first','首页');
+		$pageObj->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+		// 生成页面下面显示的上一页、下一页的字符串
+		$pageString = $pageObj->show();
+		
+		/** 取数据 **/
+		if ($count < $perPage){
+			$data = $this->where(array('promote' => array('EQ', '1'),))
+			->select();
+		}else {
+			$data = $this->where(array('promote' => array('EQ', '1'),))
+			->limit($pageObj->firstRow.','.$pageObj->listRows)
+			->select();
 		}
-		return $array;
+		/****/
+		
+		
+		
+		return array(
+				'data' => $data,  // 数据
+				'page' => $pageString,  // 翻页字符串
+		);
 	}
 	
 

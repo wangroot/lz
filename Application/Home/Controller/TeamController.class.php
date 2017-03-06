@@ -31,8 +31,14 @@ class TeamController extends Controller {
 
     	$id = I('get.id');
     	$team = D('Home/Team');
-    	$comments = D('Home/Comments');
     	$array = $team->getPage($id);
+    	$comments = D('Home/Comments');
+    	$coms1 = $comments->getComments($id,5);
+    	$cnum = D('Home/Cnum');
+    	$ccnum = $cnum->where(array('tids' => $id))->select();
+ 
+    	//var_dump($com);die;
+		
     	//var_dump($in);die;
     	
     	if(IS_POST)
@@ -43,12 +49,32 @@ class TeamController extends Controller {
     			
     			if($comments->add())
     			{
+    				/** 获取评论数**/
+
+    				$com = $comments->getComment($_POST['tid']);
+    				$coms2 = $comments->getComments($_POST['tid'],5);
+    				$ccount = $coms2['count'];
+    				$cnum = D('Home/Cnum');
+    				$cnumss['cnums'] = $ccount;
     				
-    				//var_dump(U('Index/index'));
-    				//$this->redirect(U('Home/Index/index'), 5, '添加成功');
-    				//$this->success('评论成功！', U('Team/page',array('id'=>$id)),3);
-    				$this->success('评论成功！');
+    				//echo $ccount;
+    				//var_dump($coms2);die;
+    				$cnum->where(array('tids' => $_POST['tid']))->save($cnumss);
+    				
+    				/**  **/
+    				$i = $com[0]['id'];
+    				foreach ($com as $k => $v) {
+    					$n['cnum'] = $k+1;
+    					$comments->where(array('id' => $i))->save($n);
+    					$i++;
+    				}
+    				$xx['cnum'] = $ccount;
+    				$team->where(array('id' => $_POST['tid']))->save($xx);
+    				
+    				$this->success('评论成功！', U('Team/page',array('id'=>$_POST['tid'])),2);
     				exit;
+    				
+    				
     			}
     		}
     		$this->error($comments->getError());
@@ -56,9 +82,8 @@ class TeamController extends Controller {
     	
     	
 
-    	
-    	$com = $comments->getComments($id);
-    	
+    
+    	/** 获取星星数 **/
     	$star = $comments->getStars($id);
     	
     	//var_dump($com);
@@ -66,11 +91,10 @@ class TeamController extends Controller {
     	$this->assign(array(
     			'data' => $array,
     			'id' => $id,
-    			'comments' => $com,
+    			'comments' => $coms1,
     			'star' => $star,
     			
     	));
-    	
     	
     	$this->display();
     }

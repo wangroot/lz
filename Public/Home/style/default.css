@@ -314,3 +314,9 @@ h3,ul,li{margin:0;padding:0; list-style:none;}
  .uls .star1.light,.star2.light,.star3.light,.star4.light,.star5.light {
   background-position: 0 -29px;
  }
+/*美化翻页**/
+.pagination a{padding:5px;}
+.pagination span.current{padding:5px;color:#F00;font-weight:bold;}
+
+.listpages a{padding:5px;}
+.listpages span.current{padding:5px;color:#F00;font-weight:bold;}

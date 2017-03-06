@@ -256,6 +256,7 @@ $(document).ready(function(){
 												<div align="center">
 													<input name="action" value="save" type="hidden">
 													<input name="promote" value="0" type="hidden">
+													<input name="cnum" value="0" type="hidden">
 													<input name="Submit" value="提交信息" type="submit">
 												</div>
 											</td>

@@ -234,10 +234,10 @@
 			</div>
 		</div>
 			 -->
-			 <?php foreach ($data as $k => $v): ?>
+			 <?php foreach ($data['data'] as $k => $v): ?>
 		<div id="ilist">
 		<div>
-		<div class="r"><?php echo $v['ctotal']; ?></div>
+		<div class="r"><?php echo $v['cnum']; ?></div>
 		<div>
 			<span class="num" style="margin-right:50px;">
 				<?php echo $v['id']; ?>
@@ -257,7 +257,7 @@
 		</div>
 		 <?php endforeach; ?>
 		
-		<div class="listpages">&nbsp;页码:<a style="color:red" href="<?php echo U('index'); ?>">[1]</a> <a href="<?php echo U('index'); ?>">[2]</a> <a href="<?php echo U('index'); ?>">[3]</a> <a href="<?php echo U('index'); ?>">[4]</a> <a href="<?php echo U('index'); ?>">[5]</a> <a href="<?php echo U('index'); ?>">[6]</a> <a href="<?php echo U('index'); ?>">[7]</a> <a href="<?php echo U('index'); ?>">[8]</a> <a href="<?php echo U('index'); ?>">[9]</a> <a href="<?php echo U('index'); ?>">[10]</a> <a href="<?php echo U('index'); ?>">[下十页]</a>&nbsp;&nbsp; <a href="<?php echo U('index'); ?>">[下页]</a> <a href="<?php echo U('index'); ?>">[尾页]</a> 第<b>1/47</b>页</div>
+		<div class="listpages" style="height:70px;"><?php echo $data['page']; ?></div>
 		</div>
 		<div class="bl"></div>
 		<div class="br"></div>

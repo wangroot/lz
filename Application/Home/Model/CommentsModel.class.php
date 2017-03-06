@@ -4,16 +4,66 @@ use Think\Model;
 class CommentsModel extends Model 
 {
 	protected $insertFields = array('tid','star1','star2','star3','star4','star5','cname','csubject','ccontent');
-	//protected $updateFields = array('promote');
+	protected $updateFields = array('cnum');
 	
 	
+
+	function getComment($id){
 	
-	function getComments($id){
-		$array = $this->where(array(
-				'tid' => array('EQ', $id),
-		))
+		/** 取数据 **/
+		$data = $this->where(array('tid' => array('EQ', $id),))
 		->select();
-		return $array;
+		return $data;
+		
+		
+	}
+	function getComments($id,$perPage){
+		
+		
+		/*************** 翻页 ****************/
+		// 取出总的记录数
+		$count = $this->where(array('tid' => array('EQ', $id),))->count();
+		// 生成翻页类的对象
+		$pageObj = new \Think\Page($count, $perPage);
+		// 设置样式
+		$pageObj->lastSuffix=false;
+		$pageObj->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;&nbsp;&nbsp;&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
+		$pageObj->setConfig('prev','上一页');
+		$pageObj->setConfig('next','下一页');
+		$pageObj->setConfig('last','末页');
+		$pageObj->setConfig('first','首页');
+		$pageObj->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+		// 生成页面下面显示的上一页、下一页的字符串
+		$pageString = $pageObj->show();
+		
+		/** 取数据 **/
+		if ($count <= $perPage){
+			$data = $this->where(array('tid' => array('EQ', $id),))
+			->select();
+		}else {
+			$data = $this->where(array('tid' => array('EQ', $id),))
+			->limit($pageObj->firstRow.','.$pageObj->listRows)
+			->select();
+		}
+
+		
+// 		/****/
+// 		$data = $this->alias('a')
+// 		->field('a.*,b.cnums')
+// 		->join('LEFT JOIN __CNUM__ b ON a.tid=b.tids')
+// 		->where(array('a.tid' => array('EQ', $id),))
+// 		->limit($pageObj->firstRow.','.$pageObj->listRows)
+// 		->select();
+
+		/****/
+		        
+		
+		
+		return array(
+			'data' => $data,  // 数据
+			'page' => $pageString,  // 翻页字符串
+			'count' => $count,
+		);
 	}
 	
 	
