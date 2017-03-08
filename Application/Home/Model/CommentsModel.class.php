@@ -73,7 +73,7 @@ class CommentsModel extends Model
 	function getStars($id) {
 		$stars = $this->getComments($id);
 		$i = 0;
-		foreach ($stars as $k => $v) {
+		foreach ($stars['data'] as $k => $v) {
 			$i++;
 			$star['star1'] += (float)$v['star1'];
 			$star['star2'] += (float)$v['star2'];
@@ -81,6 +81,7 @@ class CommentsModel extends Model
 			$star['star4'] += (float)$v['star4'];
 			$star['star5'] += (float)$v['star5'];
 		}
+		//var_dump($i);die;
 		$star['star1'] = $star['star1']/$i;
 		$star['star2'] = $star['star2']/$i;
 		$star['star3'] = $star['star3']/$i;
@@ -100,6 +101,7 @@ class CommentsModel extends Model
 		$star['star4'] = round($star['star4'],2);
 		$star['star5'] = round($star['star5'],2);
 		$star['total'] = round($star['total'],2);
+		//var_dump($star);die;
  		return $star;
 
 	}

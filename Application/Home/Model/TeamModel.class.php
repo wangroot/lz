@@ -26,7 +26,7 @@ class TeamModel extends Model
 // // 	    $array['num'] = $num;
 // 	    return $array;
 // 	}
-	// 获取温度、湿度动态数据
+	// 获取提交待审核数据
 	function get(){
 		$array = $this->where(array(
  						'promote' => array('NEQ', '1'),
@@ -34,7 +34,15 @@ class TeamModel extends Model
 		->select();
 		return $array;
 	}
-
+	
+	// 获取最新收录
+	function getN($limit) {
+		$array = $this->where(array(
+							'promote' => array('EQ', '1'),
+					))->order('id desc')->limit($limit)
+					  ->select();
+		return $array;
+	}
 
 	
 	function getPData($perPage){

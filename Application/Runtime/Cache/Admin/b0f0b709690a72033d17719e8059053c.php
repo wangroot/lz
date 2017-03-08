@@ -55,7 +55,11 @@
         	
         </tr>
          <?php endforeach; ?>
+         
+        
+
     </table>
+    	
    </form>
 </div>
 <!-- end order statistics -->

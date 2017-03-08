@@ -126,8 +126,8 @@ body {
             <li class="explode" key="02_cat_and_goods" name="menu">
             管理
                 <ul>
-                    <li class="menu-item"><a href="<?php echo U('Admin/Index/index');?>" target="main-frame">列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Admin/Index/index');?>" target="main-frame">列表</a></li>
+                    <li class="menu-item"><a href="<?php echo U('Admin/Index/main');?>" target="main-frame">待录入信息审核</a></li>
+                    <li class="menu-item"><a href="<?php echo U('Admin/Index/zuan');?>" target="main-frame">砖石会员设置</a></li>
                     <li class="menu-item"><a href="<?php echo U('Admin/Index/index');?>" target="main-frame">列表</a></li>
                     <li class="menu-item"><a href="<?php echo U('Admin/Index/index');?>" target="main-frame">列表</a></li>
                     <li class="menu-item"><a href="<?php echo U('Admin/Index/index');?>" target="main-frame">列表</a></li>

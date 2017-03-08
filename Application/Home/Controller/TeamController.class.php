@@ -35,8 +35,10 @@ class TeamController extends Controller {
     	$comments = D('Home/Comments');
     	$coms1 = $comments->getComments($id,5);
     	$cnum = D('Home/Cnum');
-    	$ccnum = $cnum->where(array('tids' => $id))->select();
- 
+    	
+ 		
+    	//初始化星星评论
+
     	//var_dump($com);die;
 		
     	//var_dump($in);die;
@@ -54,11 +56,24 @@ class TeamController extends Controller {
     				$com = $comments->getComment($_POST['tid']);
     				$coms2 = $comments->getComments($_POST['tid'],5);
     				$ccount = $coms2['count'];
-    				$cnum = D('Home/Cnum');
+    				$star = $comments->getStars($_POST['tid']);
     				$cnumss['cnums'] = $ccount;
-    				
+    				$cnumss['star1'] = $star['star1'];
+    				$cnumss['star2'] = $star['star2'];
+    				$cnumss['star3'] = $star['star3'];
+    				$cnumss['star4'] = $star['star4'];
+    				$cnumss['star5'] = $star['star5'];
+    				$cnumss['star5'] = $star['star5'];
+    				$cnumss['starttotal'] = $star['total'];
+    				$cnumss['s1'] = $star['s1'];
+    				$cnumss['s2'] = $star['s2'];
+    				$cnumss['s3'] = $star['s3'];
+    				$cnumss['s4'] = $star['s4'];
+    				$cnumss['s5'] = $star['s5'];
+    				$cnumss['s6'] = $star['s6'];
     				//echo $ccount;
-    				//var_dump($coms2);die;
+    				//var_dump($star);die;
+    				//更新评论总数和星星总数表
     				$cnum->where(array('tids' => $_POST['tid']))->save($cnumss);
     				
     				/**  **/
@@ -70,7 +85,8 @@ class TeamController extends Controller {
     				}
     				$xx['cnum'] = $ccount;
     				$team->where(array('id' => $_POST['tid']))->save($xx);
-    				
+    				//$ip = get_client_ip();
+    				//var_dump($ip);die;
     				$this->success('评论成功！', U('Team/page',array('id'=>$_POST['tid'])),2);
     				exit;
     				
@@ -84,15 +100,15 @@ class TeamController extends Controller {
 
     
     	/** 获取星星数 **/
-    	$star = $comments->getStars($id);
+    	$ccnum = $cnum->where(array('tids' => $id))->select();
     	
-    	//var_dump($com);
+    	//var_dump($ccnum);
     	//var_dump($star);
     	$this->assign(array(
     			'data' => $array,
     			'id' => $id,
     			'comments' => $coms1,
-    			'star' => $star,
+    			'ccnum' => $ccnum,
     			
     	));
     	

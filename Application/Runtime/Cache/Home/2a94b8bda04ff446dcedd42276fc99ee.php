@@ -234,13 +234,38 @@
 			</div>
 		</div>
 			 -->
+		<!-- 钻石区 -->	
+		<div id="ilist">
+		<div>
+		<div class="r">0</div>
+		<div>
+			<span class="num" style="margin-right:50px;">
+				<img src="/lz/Public/Home/style/diamond.gif" alt="赞助商链接">
+			</span>
+			<span class="title" style="margin-left:0px;">
+				<h2>
+					<a href="<?php echo U('Team/page',array('id'=>$v['id'])); ?>" target="">
+						uuu
+					</a>
+				</h2>
+			</span>
+			</div>
+		</div>
+		
+		<div class="sum"><a href=""></a></div>
+		 
+		</div>
+		
+			 
+		<!-- 非钻石区 -->	 
+			 
 			 <?php foreach ($data['data'] as $k => $v): ?>
 		<div id="ilist">
 		<div>
 		<div class="r"><?php echo $v['cnum']; ?></div>
 		<div>
 			<span class="num" style="margin-right:50px;">
-				<?php echo $v['id']; ?>
+				<?php  if(0){ echo '<img src="/lz/Public/Home/style/diamond.gif" alt="赞助商链接">'; }else{echo $v['id'];} ?>
 			</span>
 			<span class="title" style="margin-left:0px;">
 				<h2>
@@ -286,17 +311,19 @@
 		<div class="lframe">
 		<div class="tl"></div>
 		<div class="tr"></div>
-		<div class="tm"><span class="tt">提款速度排行</span></div>
+		<div class="tm"><span class="tt">信誉度排行</span></div>
 		<div class="wrapper">
 		<div class="ml"></div>
 		<div class="mr"></div>
 		<div class="mm">
 			<ul class="ul2 dot2">
+			<?php foreach ($s1 as $k => $v): ?>
 				<li>
-					<span class="s3">###</span>
-					<span class="s1">1</span>
-					<span class="s2"><a href="<?php echo U('Team/page'); ?>">####</a></span>
+					<span class="s3"><?php  echo $v['star1']; ?></span>
+					<span class="s1"><?php echo $k+1; ?></span>
+					<span class="s2"><a href="<?php echo U('Team/page',array('id'=>$v['tids'])); ?>"><?php  echo $v['name']; ?></a></span>
 				</li>
+			<?php endforeach; ?>
 			</ul>
 		</div>
 		</div>
@@ -307,17 +334,19 @@
 		<div class="lframe">
 		<div class="tl"></div>
 		<div class="tr"></div>
-		<div class="tm"><span class="tt">信誉度排行</span></div>
+		<div class="tm"><span class="tt">提款速度排行</span></div>
 		<div class="wrapper">
 		<div class="ml"></div>
 		<div class="mr"></div>
 		<div class="mm">
 			<ul class="ul2 dot2">
+			<?php foreach ($s2 as $k => $v): ?>
 				<li>
-					<span class="s3">###</span>
-					<span class="s1">1</span>
-					<span class="s2"><a href="<?php echo U('Team/page'); ?>">####</a></span>
+					<span class="s3"><?php  echo $v['star2']; ?></span>
+					<span class="s1"><?php echo $k+1; ?></span>
+					<span class="s2"><a href="<?php echo U('Team/page',array('id'=>$v['tids'])); ?>"><?php  echo $v['name']; ?></a></span>
 				</li>
+			<?php endforeach; ?>
 			</ul>
 		</div>
 		</div>
@@ -334,11 +363,13 @@
 		<div class="mr"></div>
 		<div class="mm">
 			<ul class="ul2 dot2">
+			<?php foreach ($s3 as $k => $v): ?>
 				<li>
-					<span class="s3">###</span>
-					<span class="s1">1</span>
-					<span class="s2"><a href="<?php echo U('Team/page'); ?>">####</a></span>
+					<span class="s3"><?php  echo $v['star3']; ?></span>
+					<span class="s1"><?php echo $k+1; ?></span>
+					<span class="s2"><a href="<?php echo U('Team/page',array('id'=>$v['tids'])); ?>"><?php  echo $v['name']; ?></a></span>
 				</li>
+			<?php endforeach; ?>
 			</ul>	
 		</div>
 		</div>
@@ -355,11 +386,13 @@
 		<div class="mr"></div>
 		<div class="mm">
 			<ul class="ul2 dot2">
+			<?php foreach ($s4 as $k => $v): ?>
 				<li>
-					<span class="s3">###</span>
-					<span class="s1">1</span>
-					<span class="s2"><a href="<?php echo U('Team/page'); ?>">####</a></span>
+					<span class="s3"><?php  echo $v['star4']; ?></span>
+					<span class="s1"><?php echo $k+1; ?></span>
+					<span class="s2"><a href="<?php echo U('Team/page',array('id'=>$v['tids'])); ?>"><?php  echo $v['name']; ?></a></span>
 				</li>
+			<?php endforeach; ?>
 			</ul>
 		</div>
 		</div>
@@ -376,11 +409,13 @@
 		<div class="mr"></div>
 		<div class="mm">
 			<ul class="ul2 dot2">
+			<?php foreach ($s5 as $k => $v): ?>
 				<li>
-					<span class="s3">###</span>
-					<span class="s1">1</span>
-					<span class="s2"><a href="<?php echo U('Team/page'); ?>">####</a></span>
+					<span class="s3"><?php  echo $v['star5']; ?></span>
+					<span class="s1"><?php echo $k+1; ?></span>
+					<span class="s2"><a href="<?php echo U('Team/page',array('id'=>$v['tids'])); ?>"><?php  echo $v['name']; ?></a></span>
 				</li>
+			<?php endforeach; ?>
 			</ul>
 		</div>
 		</div>
@@ -397,11 +432,13 @@
 		<div class="mr"></div>
 		<div class="mm">
 			<ul class="ul2 dot2">
+			<?php foreach ($s6 as $k => $v): ?>
 				<li>
-					<span class="s3">###</span>
-					<span class="s1">1</span>
-					<span class="s2"><a href="<?php echo U('Team/page'); ?>">####</a></span>
+					<span class="s3"><?php  echo $v['starttotal']; ?></span>
+					<span class="s1"><?php echo $k+1; ?></span>
+					<span class="s2"><a href="<?php echo U('Team/page',array('id'=>$v['tids'])); ?>"><?php  echo $v['name']; ?></a></span>
 				</li>
+			<?php endforeach; ?>
 			</ul>
 		</div>
 		</div>
@@ -418,11 +455,13 @@
 		<div class="mr"></div>
 		<div class="mm">
 			<ul class="ul2 dot2">
+				<?php foreach ($tnew as $k => $v): ?>
 				<li>
-					<span class="s3">###</span>
-					<span class="s1">1</span>
-					<span class="s2"><a href="<?php echo U('Team/page'); ?>">####</a></span>
+					<span class="s3"><?php echo $v['id']; ?></span>
+					<span class="s1"><?php echo $k+1; ?></span>
+					<span class="s2"><a href="<?php echo U('Team/page',array('id'=>$v['id'])); ?>"><?php echo $v['name']; ?></a></span>
 				</li>
+				<?php endforeach; ?>
 			</ul>
 		</div>
 		</div>

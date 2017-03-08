@@ -221,60 +221,60 @@
 												<td width="50" height="150" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;border-left: 1px solid #a5b5c0;">
 													<table width="28" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td align="center"><?php echo $star[star1]; ?></td>
+															<td align="center"><?php echo $ccnum[0][star1]; ?></td>
 														</tr>
 														<tr>
-															<td height="<?php echo $star[s1]; ?>" bgcolor="#FF0000">&nbsp;</td>
-														</tr>
-													</table>
-												</td>
-												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
-													<table width="28" border="0" cellspacing="0" cellpadding="0">
-														<tr>
-															<td align="center"><?php echo $star['star2']; ?></td>
-														</tr>
-														<tr>
-															<td height="<?php echo $star['s2']; ?>" bgcolor="#999900">&nbsp;</td>
+															<td height="<?php echo $ccnum[0][s1]; ?>" bgcolor="#FF0000">&nbsp;</td>
 														</tr>
 													</table>
 												</td>
 												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
 													<table width="28" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td align="center"><?php echo $star['star3']; ?></td>
+															<td align="center"><?php echo $ccnum[0]['star2']; ?></td>
 														</tr>
 														<tr>
-															<td height="<?php echo $star['s3']; ?>" bgcolor="#660099">&nbsp;</td>
-														</tr>
-													</table>
-												</td>
-												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
-													<table width="28" border="0" cellspacing="0" cellpadding="0">
-														<tr>
-															<td align="center"><?php echo $star['star4']; ?></td>
-														</tr>
-														<tr>
-															<td height="<?php echo $star['s4']; ?>" bgcolor="#333333">&nbsp;</td>
+															<td height="<?php echo $ccnum[0]['s2']; ?>" bgcolor="#999900">&nbsp;</td>
 														</tr>
 													</table>
 												</td>
 												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
 													<table width="28" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td align="center"><?php echo $star['star5']; ?></td>
+															<td align="center"><?php echo $ccnum[0]['star3']; ?></td>
 														</tr>
 														<tr>
-															<td height="<?php echo $star['s5']; ?>" bgcolor="#666666">&nbsp;</td>
+															<td height="<?php echo $ccnum[0]['s3']; ?>" bgcolor="#660099">&nbsp;</td>
 														</tr>
 													</table>
 												</td>
 												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
 													<table width="28" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td align="center"><?php echo $star['total']; ?></td>
+															<td align="center"><?php echo $ccnum[0]['star4']; ?></td>
 														</tr>
 														<tr>
-															<td height="<?php echo $star['s6']; ?>" bgcolor="#674444">&nbsp;</td>
+															<td height="<?php echo $ccnum[0]['s4']; ?>" bgcolor="#333333">&nbsp;</td>
+														</tr>
+													</table>
+												</td>
+												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
+													<table width="28" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td align="center"><?php echo $ccnum[0]['star5']; ?></td>
+														</tr>
+														<tr>
+															<td height="<?php echo $ccnum[0]['s5']; ?>" bgcolor="#666666">&nbsp;</td>
+														</tr>
+													</table>
+												</td>
+												<td width="50" align="center" valign="bottom" style="border-bottom: 1px solid #a5b5c0;">
+													<table width="28" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td align="center"><?php echo $ccnum[0]['starttotal']; ?></td>
+														</tr>
+														<tr>
+															<td height="<?php echo $ccnum[0]['s6']; ?>" bgcolor="#674444">&nbsp;</td>
 														</tr>
 													</table>
 												</td>
