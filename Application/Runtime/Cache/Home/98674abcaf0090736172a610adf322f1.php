@@ -334,7 +334,7 @@
 												<td height="30" style="border-bottom: 1px solid #999999;">
 													<table width="100%" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td style="color:#333333"><strong>作者：<?php echo $v['cname'] ?> &nbsp;&nbsp;&nbsp;</strong></td>
+															<td style="color:#333333"><strong>作者：<?php echo $v['cname'] ?> &nbsp;&nbsp;&nbsp;</strong>&nbsp;&nbsp;&nbsp;<?php echo $v['ip'] ?></td>
 															<td align="right"><a href="<?php echo U('Team/page',array('id'=>$v['tid'])); ?>"><strong>我也来点评</strong></a></td>
 														</tr>
 													</table>

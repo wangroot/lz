@@ -1,0 +1,476 @@
+[ 2017-03-08T08:53:06+08:00 ] ::1 /lz/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `team` WHERE `promote` = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `team` WHERE `promote` = '1'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `team` WHERE `promote` = '1' ORDER BY id desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: v C:\wamp\www\lz\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 247 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-08T08:53:11+08:00 ] ::1 /lz/index.php/Home/Team/page/id/54.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `team` WHERE `id` = '54'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '54' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = '54'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cnum` WHERE `tids` = 54  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant star1 - assumed 'star1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 224 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 224 行.
+NOTIC: [8] Use of undefined constant s1 - assumed 's1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 227 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 227 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 234 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 237 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 244 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 247 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 254 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 257 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 264 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 267 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 274 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 277 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-03-08T08:53:19+08:00 ] ::1 /lz/index.php/Home/Team/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `team` WHERE `id` = ''  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = ''  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0070s ]
+
+[ 2017-03-08T08:55:01+08:00 ] ::1 /lz/index.php/Home/Team/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `team` WHERE `id` = ''  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = ''  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0060s ]
+
+[ 2017-03-08T08:55:56+08:00 ] ::1 /lz/index.php/Home/Team/page/id/54.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `team` WHERE `id` = '54'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '54' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = '54'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cnum` WHERE `tids` = 54  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant star1 - assumed 'star1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 224 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 224 行.
+NOTIC: [8] Use of undefined constant s1 - assumed 's1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 227 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 227 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 234 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 237 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 244 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 247 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 254 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 257 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 264 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 267 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 274 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 277 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-03-08T08:55:58+08:00 ] ::1 /lz/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `team` WHERE `promote` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `team` WHERE `promote` = '1'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `team` WHERE `promote` = '1' ORDER BY id desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v C:\wamp\www\lz\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 247 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-08T08:55:58+08:00 ] ::1 /lz/index.php/Home/Index/style/jquery-1.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:style
+
+[ 2017-03-08T08:55:58+08:00 ] ::1 /lz/index.php/Home/Index/style/logger.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 非法操作:style
+
+[ 2017-03-08T08:55:58+08:00 ] ::1 /lz/index.php/Home/Index/style/bdsstyle.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:style
+
+[ 2017-03-08T08:56:03+08:00 ] ::1 /lz/index.php/Home/Team/page/id/61.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `team` WHERE `id` = '61'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '61' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = '61'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `cnum` WHERE `tids` = 61  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant star1 - assumed 'star1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 224 行.
+NOTIC: [8] Use of undefined constant s1 - assumed 's1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 227 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-08T08:56:10+08:00 ] ::1 /lz/index.php/Home/Team/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `team` WHERE `id` = ''  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = ''  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0060s ]
+SQL: INSERT INTO `comments` (`star1`,`star2`,`star3`,`star4`,`star5`,`cname`,`csubject`,`ccontent`,`tid`,`ip`) VALUES ('5','5','5','5','5','匿名','点评：测试5','gstdh','61','0.0.0.0') [ RunTime:0.0030s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = '61'  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '61' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = '61'  [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 2 for Home\Model\CommentsModel::getComments(), called in C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php on line 74 and defined C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php 第 20 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '61' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: perPage C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php 第 27 行.
+NOTIC: [2] Division by zero C:\wamp\www\lz\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+NOTIC: [8] Undefined variable: perPage C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php 第 40 行.
+SQL: SELECT * FROM `comments` WHERE `tid` = '61'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: star C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php 第 78 行.
+NOTIC: [8] Undefined index: star1 C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php 第 78 行.
+NOTIC: [8] Undefined index: star2 C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php 第 79 行.
+NOTIC: [8] Undefined index: star3 C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php 第 80 行.
+NOTIC: [8] Undefined index: star4 C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php 第 81 行.
+NOTIC: [8] Undefined index: star5 C:\wamp\www\lz\Application\Home\Model\CommentsModel.class.php 第 82 行.
+SQL: UPDATE `cnum` SET `cnums`='1',`star1`='5',`star2`='5',`star3`='5',`star4`='5',`star5`='5',`starttotal`='5',`s1`='145',`s2`='145',`s3`='145',`s4`='145',`s5`='145',`s6`='145' WHERE `tids` = 61 [ RunTime:0.0010s ]
+SQL: UPDATE `comments` SET `cnum`='1' WHERE `id` = 127 [ RunTime:0.0010s ]
+SQL: UPDATE `team` SET `cnum`='1' WHERE `id` = 61 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-08T08:56:12+08:00 ] ::1 /lz/index.php/Home/Team/page/id/61.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `team` WHERE `id` = '61'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '61' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = '61'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cnum` WHERE `tids` = 61  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Use of undefined constant star1 - assumed 'star1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 224 行.
+NOTIC: [8] Use of undefined constant s1 - assumed 's1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 227 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-03-08T08:57:24+08:00 ] ::1 /lz/index.php/Home/Team/page/id/61.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `team` WHERE `id` = '61'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '61' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = '61'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `cnum` WHERE `tids` = 61  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant star1 - assumed 'star1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 224 行.
+NOTIC: [8] Use of undefined constant s1 - assumed 's1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 227 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-08T08:58:39+08:00 ] ::1 /lz/index.php/Home/Team/page/id/61.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `team` WHERE `id` = '61'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '61' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = '61'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `cnum` WHERE `tids` = 61  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant star1 - assumed 'star1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 224 行.
+NOTIC: [8] Use of undefined constant s1 - assumed 's1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 227 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-08T08:59:20+08:00 ] ::1 /lz/index.php/Home/Team/page/id/61.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `team` WHERE `id` = '61'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `comments` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comments` WHERE `tid` = '61' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `comments` WHERE `tid` = '61'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `cnum` WHERE `tids` = 61  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant star1 - assumed 'star1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 224 行.
+NOTIC: [8] Use of undefined constant s1 - assumed 's1' C:\wamp\www\lz\Application\Runtime\Cache\Home\98674abcaf0090736172a610adf322f1.php 第 227 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-03-08T09:12:39+08:00 ] ::1 /lz/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `team` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `cnum` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `team` WHERE `promote` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `team` WHERE `promote` = '1'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `team` WHERE `promote` = '1' ORDER BY id desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.name FROM cnum a LEFT JOIN team b ON a.tids=b.id  ORDER BY a.s1 desc LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v C:\wamp\www\lz\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 247 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2017-03-08T09:12:39+08:00 ] ::1 /lz/index.php/Home/Index/style/jquery-1.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:style
+
+[ 2017-03-08T09:12:40+08:00 ] ::1 /lz/index.php/Home/Index/style/logger.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:style
+
+[ 2017-03-08T09:12:40+08:00 ] ::1 /lz/index.php/Home/Index/style/bdsstyle.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:style
+
+[ 2017-03-08T09:12:42+08:00 ] ::1 /lz/index.php/Home/Team/search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2017-03-08T09:12:42+08:00 ] ::1 /lz/index.php/Home/Team/style/hm.htm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:style
+

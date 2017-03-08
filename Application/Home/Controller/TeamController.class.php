@@ -48,8 +48,10 @@ class TeamController extends Controller {
     		
     		if($comments->create(I('post.'), 1))
     		{
-    			
-    			if($comments->add())
+    			$datata = $comments->create(I('post.'), 1);
+    			$datata['ip'] = get_client_ip();
+    			//var_dump($datata);die;
+    			if($comments->add($datata))
     			{
     				/** 获取评论数**/
 
@@ -102,7 +104,7 @@ class TeamController extends Controller {
     	/** 获取星星数 **/
     	$ccnum = $cnum->where(array('tids' => $id))->select();
     	
-    	//var_dump($ccnum);
+    	//var_dump($coms1);
     	//var_dump($star);
     	$this->assign(array(
     			'data' => $array,
